@@ -1,13 +1,10 @@
-.show{
-
-}
 #show-img { max-width: 100%; max-height: 600px; }
 .small-img{
-  width: 350px;
+  width: 92%;
   height: 70px;
   margin-top: 10px;
   position: relative;
-  left: 25px;
+  left: 0;
 }
 .small-img .icon-left, .small-img .icon-right{
   width: 12px;
@@ -17,6 +14,7 @@
   top: 0;
   bottom: 0;
   margin: auto 0;
+  display: none;
 }
 .small-img .icon-left{
   transform: rotate(180deg)
@@ -28,7 +26,7 @@
   opacity: .5;
 }
 .small-container{
-  width: 310px;
+  width: 90%;
   height: 70px;
   overflow: hidden;
   position: absolute;
@@ -48,8 +46,10 @@
   cursor: pointer;
   float: left;
   padding: 2px;
+  overflow: hidden;
+  border: 2px solid #f1f1f1;
 }
-.small-container .show-small-img img { height: 64px; }
+.small-container .show-small-img img { height: 100%; }
 .small-container .show-small-img:last-of-type{
   margin-right: 0;
 }
