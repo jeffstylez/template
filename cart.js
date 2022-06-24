@@ -2,10 +2,16 @@ $(document).ready(function () {
 
   $("span.addToCart").on("click", function () {
     var id = $(this).attr("data-id");
+	var prod = $(this).attr("data-prod");
+	var prodreset = $(this).attr("data-prodreset");
 	var quantity = document.getElementById("product_quantity").value;
+	var varaction = "add";
+	  if(prod == "try") {
+		  varaction = "try";
+	  }
     $.ajax({
         type: "GET",
-        url: "/functions/ajax.php?id=" + id + "&action=add&qty=" + quantity,
+        url: "/functions/ajax.php?id=" + id + "&action=" + varaction + "&qty=" + quantity,
       })
       .done(function () {
 		if(quantity > 0){
